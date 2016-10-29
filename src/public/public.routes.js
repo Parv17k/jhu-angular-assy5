@@ -47,5 +47,25 @@ function routeConfig ($stateProvider) {
       controller: 'SignUpController',
       controllerAs: 'signupCtrl'
     })
+    .state('public.myinfo', {
+      url: '/myinfo',
+      templateUrl: 'src/public/myinfo/myinfo.html',
+      controller: 'MyInfoController',
+      controllerAs: 'myinfoCtrl',
+      resolve: {
+        menuItem: ['$q', 'UserService','MenuService', function ($q, UserService, MenuService) {
+          var deferred = $q.defer();
+          var user = UserService.getUser();
+          if (!user.short_name){
+            deferred.resolve(false);
+            return deferred.promise;
+          } else {
+            return MenuService.getMenuItem(user.short_name);
+          }
+          
+        }]
+      }
+
+    });
 }
 })();
