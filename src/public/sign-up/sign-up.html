@@ -83,6 +83,9 @@
     <button class='btn btn-lg primary submit' ng-disabled="regForm.$invalid" ng-click="signupCtrl.submit()">
       Sign Up
     </button>
+    <span ng-show="signupCtrl.submitted && !regForm.$invalid">
+      Your information has been saved.
+    </span>
   </form>
 </fieldset>
 </div>
