@@ -113,6 +113,23 @@ h3.menu-item-title {
 }
 /* END SINGLE CATEGORY PAGE */
 
+/* Sign up form*/
+legend.header{
+  color: white;
+}
+
+button.submit{
+  color: green;
+}
+
+button.submit.btn[disabled]{
+  color: red;
+}
+/* End Sign up form*/
+
+/* Info*/
+
+/* End my info*/
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {

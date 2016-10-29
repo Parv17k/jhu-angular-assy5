@@ -1,6 +1,6 @@
 <div class='container'>
 <fieldset ng-controller="SignUpController as signupCtrl">
-  <legend>NewsLetter Registration</legend>
+  <legend class='header'>NewsLetter Registration</legend>
   <form name='regForm' novalidate>
 
     <div class="form-group" ng-class='
@@ -75,12 +75,12 @@
         dish-available>
       <span class="help-block" 
         ng-if="regForm.short_name.$invalid && regForm.short_name.$touched">
-        Invalid Dish menu number. Try again.
+        No such menu number exists. Try again.
       </span>
     </div>
     <br>
 
-    <button class='btn submit' ng-disabled="regForm.$invalid" ng-click="signupCtrl.submit()">
+    <button class='btn btn-lg primary submit' ng-disabled="regForm.$invalid" ng-click="signupCtrl.submit()">
       Sign Up
     </button>
   </form>
