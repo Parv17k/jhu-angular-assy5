@@ -55,7 +55,8 @@
       <label class="control-label" for="short_name">Favorite dish Menu Number</label>
       <input type="text" name="short_name" placeholder="Write the menu number here, e.g. L1"
         ng-model="signupCtrl.user.short_name"
-        class='form-control' id='short_name'>
+        class='form-control' id='short_name'
+        dish-available>
       <span class="help-block" 
         ng-if="regForm.short_name.$invalid && regForm.short_name.$touched">
         Invalid Dish menu number. Try again.
