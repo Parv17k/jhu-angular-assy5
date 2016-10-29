@@ -8,7 +8,7 @@ angular.module('public')
 //SignUpController.$inject = [''];
 function SignUpController(){
   var signupCtrl = this;
-  
+  signupCtrl.user = {};
 }
 
 
